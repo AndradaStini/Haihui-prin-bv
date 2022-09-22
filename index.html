@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Haihui prin Brașov</title>
+    
+
+    <!-- Link our css file-->
+    <link rel="icon" type="image/x-icon" href="Imagini/l1.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    
+</head>
+
+
+<body>
+    <!--Bara de navigare incepe aici-->
+    <section class="nav-bar">
+        <div class="container">
+            <div class="Logo">
+                <img src="imagini/l1.png" alt="Logo aplicatie" class="img-responsive">
+            </div>
+
+            <div class="Menu text-right">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Acasă</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Conectează-te</a>
+                        </li>
+                        <li>
+                            <a href="atractii.php">Atracții</a>
+                        </li>
+                        <li>
+                            <a href="harta.php">Hartă</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Quiz</a>
+                        </li>
+                        <li>
+                            <a href="vreme.html">Vreme</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+
+            <div class="clearfix">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--Sectiunea de search incepe aici-->
+    <section class="search text-center">
+        <div class="welcome">
+
+            <p>
+                Bine ai venit Haihui prin Brasov!
+            </p>
+        </div>
+
+        
+
+    </section>
+
+    <!--Sectiunea de carusel incepe aici-->
+    <section class="carusel-imagini">
+
+        <main>
+            <div class="slider">
+                <div class="slides">
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <input type="radio" name="radio-btn" id="radio6">
+
+                    <!--radio buttons end-->
+
+                    <!--slide images start-->
+                    <div class="slide first">
+                        <img src="imagini/brasov.jpg" alt="">
+
+                    </div>
+                    <div class="slide">
+                        <img src="imagini/CastelulBran.jpg" alt="">
+
+                    </div>
+
+                    <div class="slide">
+                        <img src="imagini/cetatea-fagaras.jpg" alt="">
+                    </div>
+
+                    <div class="slide">
+                        <img src="imagini/piata-sfatului.jpg" alt="">
+                    </div>
+
+                    <div class="slide">
+                        <img src="imagini/predeal.jpg" alt="">
+                    </div>
+
+                    <div class="slide">
+                        <img src="imagini/rasnov.jpg" alt="">
+                    </div>
+
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                        <label for="radio6" class="manual-btn"></label>
+
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                var counter = 1;
+                setInterval(function () {
+                    document.getElementById('radio' + counter).checked = true;
+                    counter++;
+                    if (counter > 6) {
+                        counter = 1;
+                    }
+                }, 5000);
+            </script>
+        </main>
+
+
+    </section>
+<!-- Sectiunea de carusel se termina aici-->
+
+<!--Sectiunea de stiati ca-->
+<div class="container2">
+    <button type="open" class="btn" onclick="openPopup()">Știați că...</button>
+    <div class="popup" id="popup">
+        <img src="imagini/popup.png">
+        <h2>Știați că...</h2>
+        <p>Termenul “brașoava”, sinonim cu minciuna, provine de la obiceiul negustorilor brașoveni de a-și lăuda exagerat produsele? Mai există și termenul “brașovenește” care are aceleași semnificații: “Îmi vorbești brașovenește, spui numai minciuni/brașoave.”
+        </p>
+        <button type="button" onclick="closePopup()">Închide</button>
+    </div>
+    
+</div>
+
+<script>
+    let popup = document.getElementById("popup");
+  
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+
+   
+
+</script>
+
+
+
+<!--Sectiunea de parallax incepe aici-->
+
+<section class="parallax_section">
+<!-- Container element -->
+<div class="parallax"></div>
+</section>
+
+<!--Sectiunea de parallax se termina aici-->
+
+
+    <!--Sectiunea de atractii populare incepe aici-->
+    <section class="atractii-populare">
+        <div class="container">
+            <h2 class="text-center">Atracții populare</h2>
+            <a href="biserica_neagra.html">
+
+                <div class="box-3 float-container">
+                    <img src="imagini/popular1.jpg" alt="Biserica neagra" class="img-responsive1">
+
+                    <h3 class="float-text text-white">Biserica Neagră</h3>
+                </div>
+            </a>
+
+            <a href="piata_sfatului.html">
+                <div class="box-3 float-container">
+                    <img src="imagini/popular2.jpg" alt="Centru" class="img-responsive1">
+
+                    <h3 class="float-text text-white">Piața Sfatului</h3>
+                </div>
+            </a>
+
+            <a href="cetatea_fagaras.html">
+                <div class="box-3 float-container">
+                    <img src="imagini/popular3.jpg" alt="Cetatea Fagaras" class="img-responsive1">
+
+                    <h3 class="float-text text-white">Cetatea Făgăraș</h3>
+                </div>
+            </a>
+            <div class="clearfix"></div>
+        </div>
+
+    </section>
+    <!--Sectiunea de atractii populare se termina aici-->
+
+<!-- sectiunea scris-->
+<section class="despre">
+<div class="despre-box">
+    <p>...Braşovul este un oraş plin de istorie, cu o arhitectură combinată: case vechi, înalte, ce ne transpun în timpuri demult apuse, alături de blocuri noi şi clădiri de birouri aparţinând începutului de mileniu 3. Faima sa a trecut hotarele ţării, din ce în ce mai mulţi turişti străini venind aici pentru a vizita locuri de o frumuseţe tulburatoare... </p>
+</div>
+
+</section>
+
+
+    
+
+
+
+    <section class="video">
+        <div class="video_box">
+            <video autoplay muted loop>
+                <source src="imagini/video.mp4" type="video/mp4">
+            </video>
+        </div>
+        </section>
+
+<!--
+        <section class="audio">
+            <div class="audio_box">
+        <audio controls autoplay>
+            
+            <source src="imagini/song.ogg" type="audio/ogg">
+            <source src="imagini/song.mp3" type="audio/mpeg">
+            
+          </audio>
+          </div>
+        </section>-->
+
+
+    <!--Sectiunea de footer incepe aici-->
+    <section class="footer">
+        <div class="container text-center">
+            <p>
+                Aplicație creată de <a href="#"> Andrada Stiniguță</a> și <a href="#">Alexandra Mitrache  :)</a>
+            </p>
+        </div>
+
+    </section>
+    <!--Sectiunea de footer se termina aici-->
+</body>
+</html>

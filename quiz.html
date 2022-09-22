@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haihui prin Brasov</title>
+
+
+    <!-- Link our css file-->
+    <link rel="icon" type="image/x-icon" href="Imagini/l1.png">
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://kit.fontawesome.com/99351ef5d4.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <!--Bara de navigare incepe aici-->
+    <section class="nav-bar">
+        <div class="container">
+            <div class="Logo">
+                <img src="imagini/l1.png" alt="Logo aplicatie" class="img-responsive">
+            </div>
+
+            <div class="Menu text-right">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Acasă</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Conectează-te</a>
+                        </li>
+                        <li>
+                            <a href="atractii.php">Atracții</a>
+                        </li>
+                        <li>
+                            <a href="harta.php">Hartă</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Quiz</a>
+                        </li>
+                        <li>
+                            <a href="vreme.html">Vreme</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+
+            <div class="clearfix">
+            </div>
+
+        </div>
+    </section>
+
+<!--Buton de start quiz-->
+
+    <div class="start_btn"><button>Incepe Quiz-ul</button></div>
+
+    <!--Casuta de informatii-->
+    <div class="info_box">
+        <div class="info_title">
+            <span>Regulile quiz-ului:</span>
+        </div>
+        <div class="info-list">
+            <div class="info">1. Vei avea 15 secunde pentru fiecare intrebare.</div>
+            <div class="info">2. Odata ce selectezi un raspuns, nu il poti deselecta.</div>
+            <div class="info">3. Nu poti selecta nicio optiune odata ce s-a scurs timpul.</div>
+            <div class="info">4. Nu poti iesi din quiz in timp ce il joci.</div>
+            <div class="info">5. Vei primi puncte in functie de cate raspunsuri corecte ai.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Renunta</button>
+            <button class="restart">Continua</button>
+        </div>
+    </div>
+
+    <!--Quiz box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Quiz Judetul Brasov</div>
+        <div class="timer">
+            <div class="time_text">Timp ramas</div>
+       <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+               <!--<span>Ce castel este considerat Castelul lui Dracula?</span> -->
+            </div>
+            <div class="option_list">
+
+                <!--<div class="option">
+                    <span>Castelul Corvinilor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+
+                <div class="option">
+                    <span>Castelul Bran</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+
+                <div class="option">
+                    <span>Castelul Cantacuzino</span>
+                </div>
+
+                <div class="option">
+                    <span>Castelul Peles</span>
+                </div> -->
+
+            </div>
+        </section>
+
+        <!--Quiz box footer-->
+        <footer>
+            <div class="total_que">
+                
+                <!--<p> Intrebarea <span> 2 </span> din <span> 5 </span> </p> -->
+</div>
+<button class="next_btn"> Urmatoarea intrebare</button>
+        </footer>
+    </div>
+
+    <!--Result Box-->
+    <div class="result_box">
+        <div class="icon">
+            <i class='fas fa-trophy fa-pulse fa-spin fa-1x'></i>
+        </div>
+        <div class="complete_text">Ai terminat de completat quiz-ul!</div>
+        <div class="score_text">
+           <!--- <span>Ai obtinut <p>2</p> din <p>5</p>puncte</span> -->
+        </div>
+        <div class="buttons">
+        <button class="restart">Reia Quiz-ul de la inceput</button>
+        <button class="quit">Iesi din Quiz</button>
+    </div>
+</div>
+
+<script src="js/script-quiz.js"></script>
+<script src="js/questions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harta</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <!-- Link our css file-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="Imagini/l1.png">
+</head>
+
+<body>
+    <style>
+        /* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+    </style>
+    <!--Bara de navigare incepe aici-->
+    <section class="nav-bar">
+        <div class="container">
+            <div class="Logo">
+                <img src="imagini/l1.png" alt="Logo aplicatie" class="img-responsive">
+            </div>
+
+            <div class="Menu text-right">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Acasa</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Conecteaza-te/Inregistreaza-te</a>
+                        </li>
+                        <li>
+                            <a href="atractii.html">Atractii</a>
+                        </li>
+                        <li>
+                            <a href="harta.html">Harta</a>
+                        </li>
+                        <li>
+                            <a href="quiz.html">Quiz</a>
+                        </li>
+                    </ul>
+                </nav>
+               
+
+            </div>
+
+            <div class="clearfix">
+            </div>
+
+        </div>
+    </section>
+
+<!-- 2  AICI E HARTA  
+
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15510.155695393498!2d25.588966031396165!3d45.643381156759155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAttractions!5e0!3m2!1sen!2sro!4v1649954332007!5m2!1sen!2sro" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>   -->
+
+<div id="map"></div>
+<script>
+  
+    function getLocation()
+      {
+      if (navigator.geolocation)
+        {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+        }
+      else{x.innerHTML="Geolocation is not supported by this browser.";}
+      }
+    
+    function showPosition(position)
+      {
+      var lati=position.coords.latitude;
+      var long=position.coords.longitude;
+      var latlon=new google.maps.LatLng(lati, long);
+
+      function initMap() {
+   
+        // The location of Uluru
+    
+       const uluru = {latlong};
+       
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 13,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+      
+    
+      var myOptions={
+      center:latlon,zoom:14,
+      mapTypeId:google.maps.MapTypeId.ROADMAP,
+      mapTypeControl:false,
+      navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+      };
+      var map=new google.maps.Map(document.getElementById("map"),myOptions);
+      var marker=new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+      }
+    
+  
+    
+    function showError(error)
+      {
+      switch(error.code) 
+        {
+        case error.PERMISSION_DENIED:
+          x.innerHTML="User denied the request for Geolocation."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML="Location information is unavailable."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML="The request to get user location timed out."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML="An unknown error occurred."
+          break;
+        }
+      }
+    // Initialize and add the map
+
+  window.getLocation = getLocation;
+
+</script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1QBA9B0r5MNNbyyg4lqdgaMYfHVlcqVM&callback=getLocation&v=weekly"
+    async defer
+></script>
+
+</body>
+</html>
